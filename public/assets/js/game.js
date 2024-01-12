@@ -20,4 +20,24 @@ var century = function() {
        console.log(results);
 }
 
+var display = function(){
+    var index = 0;
+    var intervalID ;
+    var orderedDisplay = function(){
+        intervalID = setInterval(order, 1000);
+    };
+    var order = function(){
+        if (index !== results.length){
+            console.log(results[index]);
+            index++;
+        } else {
+            if (intervalID){
+                clearInterval(intervalID);
+            }
+        }
+    };
+    orderedDisplay();
+};
+
 century();
+display();
