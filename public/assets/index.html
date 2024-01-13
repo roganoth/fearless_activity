@@ -6,11 +6,148 @@
     <title>Century</title>
     <link rel="reset" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="./js/game.js"></script>
 
 </head>
 <body>
+    <div class="container" id="banner">
+        <h1>Welcome to the Casino</h1>
+    </div>
+    
+    <div class="container" id="rules">
+        <h2>Here Are the Rules to Century!</h2>
+        <p>While this sedate game of predicting numbers doesn't offer the same thrill as many other games of chance, it's a popular way to pass the time with decent odds of winning at least some of your money back.<p></p><br>
+            Supplies: Two distinct 10-sided dice for the dealer (or any other way to randomly generate numbers between 1 and 100) and sheets of paper for players to record their predictions.<p></p><br>            
+            How to Play: Each player bets a stake (the minimum can be different at each casino, though usually it's 5 cp) and chooses between two and 10 numbers that fall between one and 100. Then, the dealer rolls the d10s 20 times to randomly generate 20 different numbers (rolling again if a duplicate is ever rolled). Some casinos determine these numbers by pulling numbered balls out of a wire tumbler, performing this drawing slowly to maximize excitement. Each player's predictions are compared to the generated numbers. A player receives a payout if some of their numbers match, depending on how many numbers the player predicted. Generally, the more numbers the player chooses, the more that need to match to receive any payout.<p></p><br>            
+            The Century Payouts table below shows the payout depending on how many numbers a player has predicted and how many generated numbers match these predictions.<p></p><br>            
+            Odds: A player's odds of success depend on how many numbers they predict. For instance, there's about a 38% chance of matching one number if the player predicts two, but only a 6% chance of both matching. There's approximately a 14% chance of matching two numbers if the player predicts three, but less than a 2% chance of all three matching. In general, the more numbers the player has to match for a payout, the smaller the chance of it happening.</p>
+    </div>
+
+    <div class="container text-center" id="payout">
+        <table id="payoutTable">
+            <tr>
+                <th></th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                <th>8</th>
+                <th>9</th>
+                <th>10</th>
+            </tr>
+            <tr>
+                <td class="vertHeader">1</td>
+                <td>x1</td>
+            </tr>
+            <tr>
+                <td class="vertHeader">2</td>
+                <td>x5</td>
+                <td>x2</td>
+                <td>x2</td>
+            </tr>
+            <tr>
+                <td class="vertHeader">3</td>
+                <td></td>
+                <td>x30</td>
+                <td>x5</td>
+                <td>x2</td>
+                <td>x2</td>
+                <td>x1</td>
+            </tr>
+            <tr>
+                <td class="vertHeader">4</td>
+                <td></td>
+                <td></td>
+                <td>x60</td>
+                <td>x10</td>
+                <td>x4</td>
+                <td>x2</td>
+                <td>x2</td>
+                <td>x1</td>
+            </tr>
+            <tr>
+                <td class="vertHeader">5</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>x200</td>
+                <td>x50</td>
+                <td>x20</td>
+                <td>x10</td>
+                <td>x5</td>
+                <td>x5</td>
+            </tr>
+            <tr>
+                <td class="vertHeader">6</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>x800</td>
+                <td>x400</td>
+                <td>x100</td>
+                <td>x40</td>
+                <td>x20</td>
+            </tr>
+            <tr>
+                <td class="vertHeader">7</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>x2000</td>
+                <td>x1500</td>
+                <td>x200</td>
+                <td>x100</td>
+            </tr>
+            <tr>
+                <td class="vertHeader">8</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>x5000</td>
+                <td>x2000</td>
+                <td>x500</td>
+            </tr>
+            <tr>
+                <td class="vertHeader">9</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>x5000</td>
+                <td>x2000</td>
+            </tr>
+            <tr>
+                <td class="vertHeader">10</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>x5000</td>
+            </tr>
+        </table>
+        <div class="container-fluid" id="results"></div>
+    </div>
+    <p></p><br>
+    <button type="submit" class="btn btn-primary" id="roll">Roll 'Em!</button>
+    <button type="submit" class="btn btn-primary" id="reset">Reset</button>
+
     
 </body>
 </html>

@@ -1,3 +1,4 @@
+$(document).ready(function(){
 var result
 var results = []
 
@@ -29,6 +30,7 @@ var display = function(){
     var order = function(){
         if (index !== results.length){
             console.log(results[index]);
+            $("#results").append(" " + results[index] + " ")
             index++;
         } else {
             if (intervalID){
@@ -39,5 +41,17 @@ var display = function(){
     orderedDisplay();
 };
 
-century();
-display();
+$("#roll").on("click", function(){
+    century();
+    display();
+})
+
+$("#reset").on("click", function(){
+    results = [];
+    $("#results").empty();
+    console.log(results);
+})
+
+/* century();
+display(); */
+})
