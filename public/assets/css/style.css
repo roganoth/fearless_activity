@@ -4,9 +4,13 @@
 
 #results {
     font-size: large;
-    bold
-    text-align: left;
+    font-weight: bold;
 }
+
+#nameInput {
+    width: fit-content;
+}
+
 @media (max-width: 800px) {
     #roll {
         margin-left: auto;
