@@ -52,6 +52,7 @@ $("#reset").on("click", function(){
     console.log(results);
 })
 
+
 /* century();
 display(); */
 })
