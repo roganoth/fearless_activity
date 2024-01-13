@@ -4,5 +4,11 @@
 
 #results {
     font-size: large;
+    bold
     text-align: left;
+}
+@media (max-width: 800px) {
+    #roll {
+        margin-left: auto;
+    }
 }
