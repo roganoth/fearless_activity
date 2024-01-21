@@ -8,4 +8,8 @@ $(document).ready(function(){
         console.log("Players have been reset");
         $("#playerNames").empty();
     })
+    $("#darkMode").click(function(){
+        $("body").toggleClass("darkmode");
+        $("table").toggleClass("darkmode");
+    })
 })
