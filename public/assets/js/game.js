@@ -7,6 +7,12 @@ var d100 = function(){
     result = Math.floor(Math.random() * 100)+1   
 }
 
+var empty = function(){
+    results = [];
+    $("#results").empty();
+    console.log(results);
+}
+
 var century = function() {
     for (let i=0; i<20;){
         d100();
@@ -42,14 +48,13 @@ var display = function(){
 };
 
 $("#roll").on("click", function(){
+    empty();
     century();
     display();
 })
 
 $("#reset").on("click", function(){
-    results = [];
-    $("#results").empty();
-    console.log(results);
+    empty();
 })
 
 
