@@ -29,21 +29,27 @@ tr {
     text-align: center;
 }  */
 
+#playerNames {
+    top: 0%;
+}
 
+#payout {
+    display: flex;
+}
 table {
     border: 1px solid #1C6EA4;
     background-color: #EEEEEE;
-    /* width: 75%; */
-    text-align: left;
+    width: 20%; 
+    text-align: center;
     border-collapse: collapse;
   }
   table td, table th {
     border: 1px solid #AAAAAA;
     padding: 3px 2px;
   }
-  /* table tbody td {
-    font-size: 13px; */
-  }
+
+  
+  
   table thead {
     background: #1C6EA4;
     border-bottom: 2px solid #444444;
